@@ -1,0 +1,15 @@
+{
+  "package_version": "0.2-offline",
+  "date": "2026-10-25",
+  "offline_requested_tasks": "COMPLETE",
+  "database_connections_in_current_task": 0,
+  "source_database_validation": "未经数据库验证 / NOT VALIDATED",
+  "source_data_reextraction": "NOT_RUN",
+  "original_extraction_replication": "NOT_CLAIMED",
+  "public_GitHub_deposit": "NOT_PUBLISHED",
+  "public_repository_url": null,
+  "analysis_code_change": "Yes/No treatment normalization added; prior source retained",
+  "model_rerun_after_encoding_change": "NOT_RUN",
+  "reference_profiles": "AGGREGATE_ARCHIVAL_COMPARATORS_NOT_GROUND_TRUTH",
+  "comment_R3_3": "OFFLINE_WORK_COMPLETE_PUBLIC_DEPOSITION_AND_SOURCE_VALIDATION_OUTSTANDING"
+}

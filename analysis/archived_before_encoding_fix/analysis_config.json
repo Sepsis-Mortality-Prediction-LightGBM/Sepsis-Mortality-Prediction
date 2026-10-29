@@ -1,0 +1,170 @@
+{
+  "seed": 20261021,
+  "primary_model": "LightGBM",
+  "selection_rationale": "Chosen for the revision in response to the calibration/overfitting critique; no claim of original prespecification or test-set selection.",
+  "source_split": {
+    "development_80": 3724,
+    "internal_test_20": 902
+  },
+  "feature_columns": [
+    "age",
+    "bmi_model",
+    "charlson_comorbidity_index",
+    "heart_rate_24h_mean",
+    "map_24h_mean",
+    "urine_output_24h_mean",
+    "lactate_24h_mean",
+    "creatinine_24h_mean",
+    "glucose_24h_mean",
+    "inr_24h_mean",
+    "mechanical_ventilation_24h",
+    "vasopressor_24h",
+    "rrt_24h",
+    "antibiotic_24h",
+    "fluid_resuscitation_24h_ml",
+    "lactate_24h_delta",
+    "map_24h_delta",
+    "urine_output_24h_delta",
+    "sofa_component_sum",
+    "sex",
+    "admission_source",
+    "infection_source"
+  ],
+  "numeric_columns": [
+    "age",
+    "bmi_model",
+    "charlson_comorbidity_index",
+    "heart_rate_24h_mean",
+    "map_24h_mean",
+    "urine_output_24h_mean",
+    "lactate_24h_mean",
+    "creatinine_24h_mean",
+    "glucose_24h_mean",
+    "inr_24h_mean",
+    "mechanical_ventilation_24h",
+    "vasopressor_24h",
+    "rrt_24h",
+    "antibiotic_24h",
+    "fluid_resuscitation_24h_ml",
+    "lactate_24h_delta",
+    "map_24h_delta",
+    "urine_output_24h_delta",
+    "sofa_component_sum"
+  ],
+  "categorical_columns": [
+    "sex",
+    "admission_source",
+    "infection_source"
+  ],
+  "categorical_levels": {
+    "sex": [
+      "F",
+      "M",
+      "Unknown"
+    ],
+    "admission_source": [
+      "Emergency",
+      "Transfer",
+      "Other",
+      "Unknown"
+    ],
+    "infection_source": [
+      "Pulmonary",
+      "Abdominal",
+      "Urinary",
+      "Bloodstream",
+      "Skin_soft_tissue",
+      "Other",
+      "Unknown"
+    ]
+  },
+  "SOFA_rule": "Recompute sum of the six stored organ-component scores in every cohort; not a reconstruction of standard SOFA from raw time-stamped measurements.",
+  "outer_cv": 5,
+  "inner_cv": 3,
+  "full_training_cv": 5,
+  "objective": "negative log loss",
+  "bootstrap": 2000,
+  "bootstrap_scope": "Conditional on fixed fitted models/predictions; does not repeat model fitting or recalibration within bootstrap.",
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "catboost": "1.2.10",
+    "lightgbm": "4.7.0",
+    "xgboost": "3.4.1"
+  },
+  "input_sha256": {
+    "MIMIC-IV": "6a573ccc004c9d9e6289389d5e3a5adab7928d96b0581bbab89b0c34a9149acc",
+    "eICU": "181743b0e7ae074de350e0ad57d4e452b65da7edb43711b836ae13159ed18e34",
+    "Single-center": "82e25ba923c3a58b22ed997e471aa5249ae1c1c0b6b3217315ce834e791f5c83"
+  },
+  "search_grids": {
+    "LASSO": {
+      "model__C": [
+        0.001,
+        0.01,
+        0.1,
+        1,
+        10
+      ]
+    },
+    "XGBoost": {
+      "model__max_depth": [
+        2,
+        4
+      ],
+      "model__learning_rate": [
+        0.03,
+        0.08
+      ],
+      "model__min_child_weight": [
+        1,
+        5
+      ]
+    },
+    "LightGBM": {
+      "model__num_leaves": [
+        7,
+        15
+      ],
+      "model__learning_rate": [
+        0.03,
+        0.08
+      ],
+      "model__min_child_samples": [
+        20,
+        50
+      ]
+    },
+    "CatBoost": {
+      "model__depth": [
+        3,
+        5
+      ],
+      "model__learning_rate": [
+        0.03,
+        0.08
+      ],
+      "model__l2_leaf_reg": [
+        3,
+        10
+      ]
+    },
+    "LightGBM_no_SOFA": {
+      "model__num_leaves": [
+        7,
+        15
+      ],
+      "model__learning_rate": [
+        0.03,
+        0.08
+      ],
+      "model__min_child_samples": [
+        20,
+        50
+      ]
+    }
+  }
+}

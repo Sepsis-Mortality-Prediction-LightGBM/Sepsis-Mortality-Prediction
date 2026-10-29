@@ -1,0 +1,1 @@
+The JSON files from 2026-10-24 describe earlier synthetic/empty-schema tests only. They do not establish execution on the actual MIMIC-IV/eICU data releases. They were not repeated during the 2026-10-25 offline-only work. The authoritative current check is offline_checks_20261025.json plus static_sql_audit.json. All extraction SQL remains labelled 未经数据库验证.

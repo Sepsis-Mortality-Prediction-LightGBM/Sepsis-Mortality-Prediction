@@ -1,0 +1,3 @@
+-r requirements-database.txt
+pgserver==0.1.4
+duckdb==2.0.0

@@ -1,0 +1,43 @@
+{
+  "mimic-code": {
+    "url": "https://github.com/MIT-LCP/mimic-code",
+    "commit": "7bb12b8676157e5f24766364ed932efa6cda3cf3",
+    "commit_date": "2023-12-23",
+    "note": "Contemporaneous with MIMIC-IV 2.2; actual schema compatibility must be checked on the authorized installation."
+  },
+  "eicu-code": {
+    "url": "https://github.com/MIT-LCP/eicu-code",
+    "commit": "34cece8c70771a3fab48da84d4c47f0e133ca021"
+  },
+  "mimic_dependencies": [
+    "age",
+    "antibiotic",
+    "bg",
+    "charlson",
+    "chemistry",
+    "complete_blood_count",
+    "dobutamine",
+    "dopamine",
+    "enzyme",
+    "epinephrine",
+    "gcs",
+    "height",
+    "icustay_hourly",
+    "icustay_times",
+    "norepinephrine",
+    "oxygen_delivery",
+    "rrt",
+    "sofa",
+    "suspicion_of_infection",
+    "urine_output",
+    "urine_output_rate",
+    "ventilation",
+    "ventilator_setting",
+    "vitalsign",
+    "weight_durations"
+  ],
+  "local_patches": [
+    "icustay_hourly: PostgreSQL LATERAL generate_series replaces generated array/UNNEST pattern; hourly grid intention retained.",
+    "bg: expose existing storetime in the final projection for predictor availability filtering; original reference retained."
+  ]
+}

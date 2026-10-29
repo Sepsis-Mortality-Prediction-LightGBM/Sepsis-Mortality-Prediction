@@ -1,0 +1,5 @@
+# Treatment-encoding correction, 2026-10-25
+
+MIMIC and the institutional cleaned workbook store the four treatment flags as 0/1. The eICU Modified_data sheet stores them as Yes/No. The previous analysis used pandas.to_numeric(errors="coerce"), turning eICU Yes/No values into missing values before applying the development-fitted imputer. The corrected main analysis entry point explicitly maps known Yes/No and 0/1 encodings while retaining missing values. Unrecognized encodings raise an error rather than silently becoming zero.
+
+The unchanged previous code and its recorded configuration are in archived_before_encoding_fix/. Previous performance/SHAP outputs must not be attributed to the corrected code. No model fit, prediction, performance interval or figure was regenerated in the 2026-10-25 offline task. This correction requires a complete downstream analysis rerun before revised scientific results can be finalized. It does not resolve the separate eICU summary inconsistencies, MIMIC renal-score question or the unvalidated raw extraction.

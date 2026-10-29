@@ -1,0 +1,15 @@
+{
+  "tests": 20,
+  "status": "pass",
+  "scope": "synthetic thresholds, first ICU ordering, reconciliation error detection, SQL parsing and official empty-schema binding",
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.5.4",
+    "pandas": "3.1.0",
+    "psycopg": "3.3.6",
+    "duckdb": "2.0.0",
+    "pglast": "v8.7"
+  },
+  "real_source_reconciliation": false,
+  "record_status": "HISTORICAL_20261024_PRE_ENCODING_FIX_NOT_CURRENT_SOURCE_VALIDATION"
+}

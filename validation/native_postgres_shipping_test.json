@@ -1,0 +1,31 @@
+{
+  "postgres_version": "16.2",
+  "fixture": "fully synthetic raw clinical-schema records, NOT source research data",
+  "passed_checks": 23,
+  "checks": [
+    "native_empty_01_mimic_cohort.sql",
+    "native_empty_02_eicu_cohort.sql",
+    "native_empty_03_mimic_22_predictors.sql",
+    "native_empty_04_eicu_22_predictors.sql",
+    "native_empty_05_mimic_sofa.sql",
+    "native_empty_06_eicu_sofa.sql",
+    "mimic_heart_rate_24h_mean",
+    "mimic_map_24h_mean",
+    "mimic_lactate_24h_mean",
+    "mimic_lactate_24h_delta",
+    "mimic_urine_output_24h_mean",
+    "mimic_urine_output_24h_sum",
+    "mimic_fluid_resuscitation_24h_ml",
+    "mimic_sofa_cardiovascular_24h_new",
+    "mimic_landmark_and_unavailable_history",
+    "eicu_heart_rate_24h_mean",
+    "eicu_map_24h_mean",
+    "eicu_lactate_24h_mean",
+    "eicu_lactate_24h_delta",
+    "eicu_urine_output_24h_mean",
+    "eicu_urine_output_24h_sum",
+    "eicu_unknown_rate_and_duration_not_zero",
+    "actual_runner_readonly_export_on_synthetic_database"
+  ],
+  "real_source_extraction": false
+}

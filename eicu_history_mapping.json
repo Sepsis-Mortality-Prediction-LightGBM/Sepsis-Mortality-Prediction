@@ -1,0 +1,70 @@
+[
+  [
+    "myocardial_infarct",
+    "myocardial infarct|(^|[^a-z])mi([^a-z]|$)"
+  ],
+  [
+    "congestive_heart_failure",
+    "congestive heart failure|(^|[^a-z])chf([^a-z]|$)"
+  ],
+  [
+    "peripheral_vascular_disease",
+    "peripheral vascular|peripheral arterial|aortic aneurysm"
+  ],
+  [
+    "cerebrovascular_disease",
+    "cerebrovascular|stroke|transient ischemic"
+  ],
+  [
+    "dementia",
+    "dementia|alzheimer"
+  ],
+  [
+    "chronic_pulmonary_disease",
+    "copd|chronic obstructive|chronic pulmonary"
+  ],
+  [
+    "rheumatic_disease",
+    "rheumatoid|lupus|scleroderma|connective tissue"
+  ],
+  [
+    "peptic_ulcer_disease",
+    "peptic ulcer|gastric ulcer|duodenal ulcer"
+  ],
+  [
+    "mild_liver_disease",
+    "cirrhosis|chronic hepatitis"
+  ],
+  [
+    "diabetes_without_cc",
+    "diabetes"
+  ],
+  [
+    "diabetes_with_cc",
+    "diabetes.*(nephropathy|retinopathy|neuropathy|organ damage)"
+  ],
+  [
+    "paraplegia",
+    "paraplegia|hemiplegia|quadriplegia"
+  ],
+  [
+    "renal_disease",
+    "chronic renal failure|end.?stage renal|chronic kidney disease|dialysis dependent"
+  ],
+  [
+    "malignant_cancer",
+    "cancer|malignan|leukemia|lymphoma"
+  ],
+  [
+    "severe_liver_disease",
+    "portal hypertension|hepatic failure|esophageal varices"
+  ],
+  [
+    "metastatic_solid_tumor",
+    "metasta"
+  ],
+  [
+    "aids",
+    "(^|[^a-z])aids([^a-z]|$)|hiv.*(disease|complication)"
+  ]
+]

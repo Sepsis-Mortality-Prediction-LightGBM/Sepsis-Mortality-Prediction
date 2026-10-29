@@ -1,0 +1,23 @@
+field,unit,rebuilt_definition,historical_equivalence_status,absolute_tolerance,relative_tolerance
+age,years,"MIMIC: anchor_age + ICU calendar year - anchor_year; eICU age >89 mapped to 91, topcoding retained in cohort output",UNVERIFIED_PENDING_SOURCE_REEXTRACTION,1e-06,1e-06
+bmi_model,kg/m2,"earliest first-day weight and height, kg/(cm/100)^2; eICU admission values; no clipping/imputation",UNVERIFIED_PENDING_SOURCE_REEXTRACTION,1e-06,1e-06
+charlson_comorbidity_index,points,"MIMIC: maximum Quan disease flags across prior hospitalizations discharged before ICU admission, age points excluded; no prior history -> NULL; index-discharge score exported as audit candidate only. eICU: first24 documented past-history candidate mapping.",UNVERIFIED_PENDING_SOURCE_REEXTRACTION,1e-06,1e-06
+heart_rate_24h_mean,beats/min,"arithmetic mean of timestamp means in [0,1440) minutes; no imputation or distribution-based clipping",UNVERIFIED_PENDING_SOURCE_REEXTRACTION,1e-06,1e-06
+map_24h_mean,mmHg,"arithmetic mean of timestamp means in [0,1440) minutes; no imputation or distribution-based clipping",UNVERIFIED_PENDING_SOURCE_REEXTRACTION,1e-06,1e-06
+urine_output_24h_mean,mL per recorded event (not mL/h),arithmetic mean of timestamp-level net urine volumes; true total retained separately; never use mean as 24-h total for SOFA,UNVERIFIED_PENDING_SOURCE_REEXTRACTION,1e-06,1e-06
+lactate_24h_mean,mmol/L,"arithmetic mean of timestamp means in [0,1440) minutes; no imputation or distribution-based clipping",UNVERIFIED_PENDING_SOURCE_REEXTRACTION,1e-06,1e-06
+creatinine_24h_mean,mg/dL,"arithmetic mean of timestamp means in [0,1440) minutes; no imputation or distribution-based clipping",UNVERIFIED_PENDING_SOURCE_REEXTRACTION,1e-06,1e-06
+glucose_24h_mean,mg/dL,"arithmetic mean of timestamp means in [0,1440) minutes; no imputation or distribution-based clipping",UNVERIFIED_PENDING_SOURCE_REEXTRACTION,1e-06,1e-06
+inr_24h_mean,ratio,"arithmetic mean of timestamp means in [0,1440) minutes; no imputation or distribution-based clipping",UNVERIFIED_PENDING_SOURCE_REEXTRACTION,1e-06,1e-06
+mechanical_ventilation_24h,0/1,"any documented first24 evidence / interval overlap; 0 means no captured evidence; antibiotic is an order proxy, not confirmed administration",UNVERIFIED_PENDING_SOURCE_REEXTRACTION,1e-06,1e-06
+vasopressor_24h,0/1,"any documented first24 evidence / interval overlap; 0 means no captured evidence; antibiotic is an order proxy, not confirmed administration",UNVERIFIED_PENDING_SOURCE_REEXTRACTION,1e-06,1e-06
+rrt_24h,0/1 (documented treatment),"any documented first24 evidence / interval overlap; 0 means no captured evidence; antibiotic is an order proxy, not confirmed administration",UNVERIFIED_PENDING_SOURCE_REEXTRACTION,1e-06,1e-06
+antibiotic_24h,0/1 (order proxy),"any documented first24 evidence / interval overlap; 0 means no captured evidence; antibiotic is an order proxy, not confirmed administration",UNVERIFIED_PENDING_SOURCE_REEXTRACTION,1e-06,1e-06
+fluid_resuscitation_24h_ml,mL,"documented selected crystalloid/albumin volumes; MIMIC overlap-prorated intervals, eICU individual I/O rows; absence NULL, not automatically zero",UNVERIFIED_PENDING_SOURCE_REEXTRACTION,1e-06,1e-06
+lactate_24h_delta,mmol/L,"last minus first timestamp mean in [0,1440); at least 2 timestamps required; single measurement yields NULL (archival rule unverified)",UNVERIFIED_PENDING_SOURCE_REEXTRACTION,1e-06,1e-06
+map_24h_delta,mmHg,"last minus first timestamp mean in [0,1440); at least 2 timestamps required; single measurement yields NULL (archival rule unverified)",UNVERIFIED_PENDING_SOURCE_REEXTRACTION,1e-06,1e-06
+urine_output_24h_delta,mL per recorded event,"last minus first timestamp mean in [0,1440); at least 2 timestamps required; single measurement yields NULL (archival rule unverified)",UNVERIFIED_PENDING_SOURCE_REEXTRACTION,1e-06,1e-06
+sofa_component_sum,points,"six worst first24 components, each 0–4; missing component yields NULL; missing0 sensitivity exported separately",UNVERIFIED_PENDING_SOURCE_REEXTRACTION,1e-06,1e-06
+sex,category,"F/M/Unknown, same categories as prior model",UNVERIFIED_PENDING_SOURCE_REEXTRACTION,0,0
+admission_source,category,"same harmonization as prior reanalysis, from hospital admission source",UNVERIFIED_PENDING_SOURCE_REEXTRACTION,0,0
+infection_source,category,"MIMIC: Unknown until a first24 source-confirmed infection-site crosswalk is available; discharge-ICD candidate exported only for audit. eICU: first24 diagnosis keyword candidate, fixed site priority; original algorithm unavailable.",UNVERIFIED_PENDING_SOURCE_REEXTRACTION,0,0

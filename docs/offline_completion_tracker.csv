@@ -1,0 +1,9 @@
+user_item,offline_deliverable,evidence,offline_work_status,actual_source_run_status
+1,MIMIC/eICU screening SQL,sql/01_mimic_cohort.sql; sql/02_eicu_cohort.sql,COMPLETE_OFFLINE,NOT_RUN_NOT_CLAIMED
+2,22 predictor SQL and definitions,sql/03_mimic_22_predictors.sql; sql/04_eicu_22_predictors.sql; feature_contract.csv; docs/predictor_definitions.md,COMPLETE_OFFLINE,NOT_RUN_NOT_CLAIMED
+3,SOFA source rules and code,sql/05_mimic_sofa.sql; sql/06_eicu_sofa.sql; docs/sofa_rules.md,COMPLETE_OFFLINE,NOT_RUN_NOT_CLAIMED
+4,"Offline syntax, catalog and version audit",scripts/static_sql_audit.py; validation/static_sql_audit.json; docs/version_compatibility.md,COMPLETE_OFFLINE,NOT_RUN_NOT_CLAIMED
+5,"GitHub code archive preparation, not completed publication",README.md; analysis/; requirements*.txt; .github/workflows/offline-checks.yml,COMPLETE_OFFLINE,NOT_RUN_NOT_CLAIMED
+6,Future automatic sample/distribution/missingness/screening comparisons,scripts/validate_extraction.py; scripts/reconcile.py; docs/validation_workflow.md,COMPLETE_OFFLINE,NOT_RUN_NOT_CLAIMED
+7,Unvalidated source-extraction labelling,sql/*.sql; VALIDATION_STATUS.json,COMPLETE_OFFLINE,NOT_RUN_NOT_CLAIMED
+8,English R3.3 author response with precise state,docs/R3_3_response.md,COMPLETE_OFFLINE,NOT_RUN_NOT_CLAIMED

@@ -1,0 +1,18 @@
+{
+  "mimic": {
+    "n": 4626,
+    "deaths": 1447,
+    "reference_status": "ARCHIVAL_COMPARATOR_NOT_GROUND_TRUTH",
+    "source_database_reextraction_performed": false,
+    "internal_split_counts": {
+      "development_80": 3724,
+      "internal_test_20": 902
+    }
+  },
+  "eicu": {
+    "n": 1057,
+    "deaths": 312,
+    "reference_status": "ARCHIVAL_COMPARATOR_NOT_GROUND_TRUTH",
+    "source_database_reextraction_performed": false
+  }
+}

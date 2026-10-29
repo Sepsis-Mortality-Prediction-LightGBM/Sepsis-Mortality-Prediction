@@ -1,0 +1,53 @@
+{
+  "run_mode": "OFFLINE_ONLY",
+  "source_database_validation": "\u672a\u7ecf\u6570\u636e\u5e93\u9a8c\u8bc1 / NOT VALIDATED",
+  "tests_run": 38,
+  "tests_passed": true,
+  "socket_attempts_blocked": 0,
+  "database_connections_permitted": false,
+  "sql_static_checks": [
+    {
+      "file": "01_mimic_cohort.sql",
+      "errors": [],
+      "warnings": [],
+      "column_references_checked": 1401,
+      "sql_sha256": "a38cbf4395af9beee30210a66a9ce57f6425d2352f985c03446a26ff9490c222"
+    },
+    {
+      "file": "02_eicu_cohort.sql",
+      "errors": [],
+      "warnings": [],
+      "column_references_checked": 52,
+      "sql_sha256": "9cf96c6307d752cdac9ff300fa35adc2850d10ad09694d2acc838587b3c3046c"
+    },
+    {
+      "file": "03_mimic_22_predictors.sql",
+      "errors": [],
+      "warnings": [],
+      "column_references_checked": 2194,
+      "sql_sha256": "53021b3acd467f4eb064c80b336b6de4dae1ad462980b2223cebcf69ccbdc2c9"
+    },
+    {
+      "file": "04_eicu_22_predictors.sql",
+      "errors": [],
+      "warnings": [],
+      "column_references_checked": 719,
+      "sql_sha256": "ab9e821bb476587905037a0bed0495fcefcdf4c3111529fd34d919f5c5346393"
+    },
+    {
+      "file": "05_mimic_sofa.sql",
+      "errors": [],
+      "warnings": [],
+      "column_references_checked": 2132,
+      "sql_sha256": "62dfb5634921fc340e0d4ef694c1a813b56e00a413f4a9ae83b3a4d50df86eeb"
+    },
+    {
+      "file": "06_eicu_sofa.sql",
+      "errors": [],
+      "warnings": [],
+      "column_references_checked": 657,
+      "sql_sha256": "1a1200d0786551cf4ac0f58c760c90eb8ecb28b17a6e472b9b40dfc04154613e"
+    }
+  ],
+  "real_source_data_reextracted": false
+}
